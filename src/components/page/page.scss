@@ -1,9 +1,10 @@
-@import 'variables';
+@import '../../common/styles/variables.scss';
 
 .page {
     &__base {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-size: $baseline*2;
+        margin: 0;
 
         @media (min-width: $desktop) {
             font-size: $baseline*3;
