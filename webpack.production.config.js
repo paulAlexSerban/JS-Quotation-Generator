@@ -1,5 +1,4 @@
 const path = require('path');
-const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -8,10 +7,10 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.[contenthash].js',
-    path: path.resolve(__dirname, './build'),
+    path: path.resolve(__dirname, './production-build'),
     publicPath: ''
   },
-  mode: 'development',
+  mode: 'production',
   module: {
     rules: [
       {
@@ -57,14 +56,11 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
+      minify: false,
       title: 'Quotes Generator - Open Classrooms - FE - P5',
       template: './src/templates/index.hbs',
       filename: 'index.html',
       description: 'Use JavaScript programming and algorithms to build a random quote generator. The quotes will be randomly constructed by assembling different pieces of a sentence'
     })
-  ],
-  optimization: {
-    minimize: true,
-    minimizer: [new TerserPlugin()],
-  }
+  ]
 }

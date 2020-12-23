@@ -65,6 +65,10 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
+# Production and Development build files
+/dev-build/
+/production-build/
+
 # Yarn Integrity file
 .yarn-integrity
 
