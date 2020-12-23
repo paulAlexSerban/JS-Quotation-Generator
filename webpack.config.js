@@ -42,6 +42,12 @@ module.exports = {
             plugins: [ '@babel/plugin-proposal-class-properties' ]
           }
         }
+      },
+      {
+        test: /\.hbs$/,
+        use: [
+          'handlebars-loader'
+        ]
       }
     ]
   },
@@ -52,10 +58,9 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Quotes Generator - Open Classrooms - FE - P5',
+      template: './src/templates/index.hbs',
       filename: 'index.html',
-      meta: {
-        description: 'Use JavaScript programming and algorithms to build a random quote generator. The quotes will be randomly constructed by assembling different pieces of a sentence'
-      }
+      description: 'Use JavaScript programming and algorithms to build a random quote generator. The quotes will be randomly constructed by assembling different pieces of a sentence'
     })
   ],
   optimization: {
