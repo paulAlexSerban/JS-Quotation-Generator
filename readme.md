@@ -1,5 +1,5 @@
 # JavaScript - Quotation Generator
-> OpenClassrooms - Front End Developer Path - Project 5 - Quotation Generator
+> [OpenClassrooms.com](https://openclassrooms.com/) - Front End Developer Path - Project 5 - Vanilla JavaScript Quotation Generator
 ## Project Brief
 Use JavaScript programming and algorithms to build a random quote generator. The quotes will be randomly constructed by assembling different pieces of a sentence.
 
